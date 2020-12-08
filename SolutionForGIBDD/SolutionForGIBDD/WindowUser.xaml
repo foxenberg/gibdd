@@ -1,0 +1,47 @@
+﻿<Window x:Class="SolutionForGIBDD.WindowUser"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SolutionForGIBDD"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="WindowUser" Height="800" Width="1400"
+        WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded"
+        WindowStyle="None">
+    <StackPanel Background="#1C2F3E">
+        <Grid Height="40"
+              >
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="20 0">
+
+
+                <Button Click="BPower_Click" x:Name="BPower"
+                    Background="{x:Null}" BorderBrush="{x:Null}" VerticalAlignment="Center" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}">
+                    <materialDesign:PackIcon 
+                        Kind="Power" Foreground="#FFA2A2A2" Width="25" Height="25" />
+                </Button>
+            </StackPanel>
+        </Grid>
+        <Grid Height="100">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 0">
+                <Button Uid="0" Width="150" Content="ДОМОЙ" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"
+                        x:Name="BtnHome"
+                        Click="BtnHome_Click"/>
+                <Button Uid="1" Width="150" Content="РЕГИСТРАЦИЯ ТС" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"
+                        x:Name="RegisterCar"
+                        Click="RegisterCar_Click"/>
+                <Button Uid="2" Width="150" Content="ЗАМЕНА ПРАВ" Height="50" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF2196F3"
+                        x:Name="RegisterLicense"
+                        Click="RegisterLicense_Click"/>
+               
+            </StackPanel>
+            <Grid x:Name="GridCursor" Width="150" Height="5" Background="#FF2196F3" HorizontalAlignment="Left" Margin="10 0"/>
+        </Grid>
+        <Frame x:Name="FrameMain" Height="460" 
+               NavigationUIVisibility="Hidden">
+
+        </Frame>
+    </StackPanel>
+</Window>

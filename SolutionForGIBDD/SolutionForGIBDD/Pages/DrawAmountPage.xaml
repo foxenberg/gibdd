@@ -1,0 +1,193 @@
+﻿<Page x:Class="SolutionForGIBDD.Pages.DrawAmountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SolutionForGIBDD.Pages"
+      
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1000"
+      Title="DrawAmountPage">
+    <Page.Resources>
+        
+    </Page.Resources>
+
+    <Grid Background="#1C2F3E" x:Name="gridFine">  
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Content="Оформление штрафа"
+               Grid.Row="0" Grid.Column="3"
+               FontSize="24"
+               Grid.ColumnSpan="3"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+        <Label Content="Имя" Grid.Row="1"
+               Grid.Column="2"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="18" Margin="10"/>
+        <Label Content="Фамилия"
+               Grid.Row="1"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="18" Margin="10"/>
+        <Label Content="Отчество"
+               Grid.Row="1"
+               Grid.Column="4"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="18" Margin="10"/>
+        <TextBox x:Name="tbSurname"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Width="160" Height="40"
+                 FontSize="18"
+                 Grid.ColumnSpan="2"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Foreground="White"
+                 />
+        <TextBox x:Name="tbName" Grid.Row="1"
+                 Grid.Column="3"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Width="160" Height="40"
+                 FontSize="18"
+                 Grid.ColumnSpan="2"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Foreground="White"/>
+        <TextBox x:Name="tbMiddlename"
+                 Grid.Row="1"
+                  Grid.Column="5"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Width="160" Height="40"
+                 FontSize="18"
+                 Grid.ColumnSpan="2"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Foreground="White"/>
+        <Label Content="Дата рождения"
+               Grid.Row="2" HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="16" Margin="5"
+               Foreground="White"/>
+        <DatePicker x:Name="pickerDateBirth" 
+                    Grid.Column="1" Grid.Row="2"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    Foreground="White"/>
+        <Label Content="ГОСНОМЕР ТС"
+               Grid.Row="3"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="16" Margin="10"/>
+        <ComboBox x:Name="comboBoxCarNumber"
+                 Grid.Row="3"
+                 Grid.Column="1"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Width="140" Height="40"
+                 FontSize="18"
+                 Grid.ColumnSpan="2"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 DisplayMemberPath="CarNumber"
+                 Foreground="White"/>
+        <!--Исправить на комбо бокс-->
+        <Label Content="Номер прав "
+               Grid.Row="3" Grid.Column="4"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="16" Margin="10"
+               Foreground="White"/>
+        <TextBox x:Name="tbCarLic"
+                 Grid.Row="3"
+                 Grid.Column="5"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Center"
+                 Width="140" Height="40"
+                 FontSize="18"
+                 Grid.ColumnSpan="2"
+                 HorizontalContentAlignment="Center"
+                 VerticalContentAlignment="Center"
+                 Foreground="White"
+                 KeyDown="tbCarLic_KeyDown"
+                 MaxLength="7"/>
+        <Label Content="Штраф"
+               Grid.Row="5" Grid.Column="0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="16" Margin="5"/>
+        <ComboBox x:Name="comboBoxFine"
+                  Grid.Column="1"
+                  Grid.Row="5"
+                  Height="40"
+                  Margin="5"
+                  DisplayMemberPath="NameFine"
+                  Foreground="White"
+                  Grid.ColumnSpan="2"
+                  VerticalContentAlignment="Center"/>
+        <Label Content="Дата штрафа"
+               Grid.Row="4" Grid.Column="4"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="16" Margin="5"/>
+        <DatePicker x:Name="pickerDatefine" 
+                    Grid.Column="5" Grid.Row="4"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="16"
+                    Foreground="White"/>
+        
+        <Label Content="Инспектор"
+               Grid.Row="5" Grid.Column="4"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Center"
+               FontSize="16" Margin="5"/>
+        <ComboBox x:Name="comboBoxPolice"
+                  Grid.Column="5"
+                  Grid.Row="5"
+                  Height="40"
+                  Margin="5"
+                  DisplayMemberPath="Surname"
+                  Foreground="White"
+                  VerticalContentAlignment="Center"
+                  />
+        <Button x:Name="buttonAddDriver"
+                Content="Записать"
+                Grid.Column="1"
+                Grid.Row="6"
+                FontSize="20"
+                Height="50" Click="buttonAddDriver_Click"
+                />
+        <Button x:Name="buttonCancel"
+                Content="Отмена"
+                Grid.Column="3"
+                Height="50"
+                Grid.Row="6"
+                FontSize="20" Click="buttonCancel_Click"/>
+       
+        
+    </Grid>
+</Page>

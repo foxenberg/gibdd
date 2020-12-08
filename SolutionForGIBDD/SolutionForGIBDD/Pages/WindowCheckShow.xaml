@@ -1,0 +1,128 @@
+﻿<Window x:Class="SolutionForGIBDD.Pages.WindowCheckShow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SolutionForGIBDD.Pages"
+        mc:Ignorable="d"
+        Title="WindowCheckShow" Height="650" Width="400">
+    <Grid 
+          >
+        <Grid x:Name="check"
+              Background="#1C2F3E">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"
+               Grid.Column="0"
+               x:Name="labelSurname"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Margin="5,0,0,0"/>
+            <Label Grid.Row="0"
+               Grid.Column="1"
+               x:Name="labelName"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+            <Label Grid.Row="0"
+               Grid.Column="2"
+               x:Name="labelPatron"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+            <Label Grid.Row="1"
+               Grid.Column="0"
+               x:Name="labelMark"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               Margin="5,0,0,0"/>
+            <Label Grid.Row="1"
+               Grid.Column="1"
+               x:Name="labelModel"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+            <Label Grid.Row="1"
+               Grid.Column="2"
+               x:Name="labelCarNumber"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+            <TextBlock Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               Grid.RowSpan="2"
+               x:Name="tbNameFine"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"
+               TextWrapping="Wrap"
+                   Width="350"
+                   Height="120"
+                   Foreground="White"
+                   />
+            <Label x:Name="labelAmountFine"
+               Grid.Row="4"
+               Grid.Column="1"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"
+               Margin="10,0,0,0"
+               />
+            
+            <Label Grid.Row="5"
+                   Grid.Column="0"
+                   HorizontalAlignment="Right"
+                   VerticalAlignment="Center"
+                   Content="Сотрудник:"
+                   Margin="5,0,0,0"/>
+            <Label x:Name="labelPolice"
+               Grid.Row="5"
+               Grid.Column="1"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"/>
+            <Label x:Name="labelPoliceName"
+               Grid.Row="5"
+               Grid.Column="2"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"/>
+            <Label 
+               Grid.Row="6"
+               Grid.Column="0"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Right"
+               Content="Дата выписывания: "/>
+
+            <Label x:Name="labelDateFine"
+               Grid.Row="6"
+               Grid.Column="1"
+               VerticalAlignment="Center"
+               HorizontalAlignment="Left"/>
+            <Label Content="Подпись: "
+               Grid.Row="7"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Bottom"
+               FontSize="18"/>
+            
+        </Grid>
+        <Button x:Name="btnPrint"
+                Grid.Row="8"
+                Grid.Column="1"
+                Content="Печать"
+                Width="90"
+                Height="40"
+                Click="btnPrint_Click"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                Margin="0,0,0,10"/>
+        
+    </Grid>
+</Window>

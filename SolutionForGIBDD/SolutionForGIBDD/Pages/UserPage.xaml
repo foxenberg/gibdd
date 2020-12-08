@@ -1,0 +1,85 @@
+﻿<Page x:Class="SolutionForGIBDD.Pages.UserPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SolutionForGIBDD.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="UserPage">
+    <ScrollViewer
+        HorizontalAlignment="Center"
+        >
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0">
+                <Label Content="Информация об отделах ГИБДД г. Казани"
+                       HorizontalAlignment="Center"
+                       FontSize="22"
+                       Margin="0,20,0,0"/>
+            </StackPanel>
+
+            <StackPanel Grid.Row="1">
+                <Label Content="Дежурная часть ГИБДД Казань"
+                       Margin="10"
+                       FontWeight="Bold"
+                       FontSize="18"/>
+                <Label Content="Телефон: +7 (843) 533-38-12"
+                       Margin="10,0,0,0"/>
+                <Label Content="Городское отделение ГИБДД, Казань"
+                       Margin="10"
+                       FontWeight="Bold"
+                       FontSize="18"/>
+                <Label Content="Адрес: Казань, Оренбургский тракт 5"
+                       Margin="10,0,0,0"/>
+                <Label Content="Телефон: +7 (843) 533-38-12"
+                       Margin="10,0,0,0"/>
+                <Label Content="Авиастроительное отделение ГИБДД, Казань"
+                       Margin="10"
+                       FontWeight="Bold"
+                       FontSize="18"/>
+                <Label Content="Адрес: Казань, Айдарова 24"
+                       Margin="10,0,0,0"/>
+                <Label Content="Телефон: +7 (843) 570-86-39"
+                       Margin="10,0,0,0"/>
+                <Label Content="Вахитовское отделение ГИБДД, Казань"
+                       Margin="10"
+                       FontWeight="Bold"
+                       FontSize="18"/>
+                <Label Content="Адрес: Казань, Хади Такташ 73"
+                       Margin="10,0,0,0"/>
+                <Label Content="Телефон: +7 (843) 278-00-22"
+                       Margin="10,0,0,0"/>
+                <Label Content="Кировское отделение ГИБДД, Казань"
+                       Margin="10"
+                       FontWeight="Bold"
+                       FontSize="18"/>
+                <Label Content="Адрес: Казань, Иовлева 1/93"
+                       Margin="10,0,0,0"/>
+                <Label Content="Телефон: +7 (843) 555-07-52"
+                       Margin="10,0,0,0"/>
+                <Label Content="Приволжское ГИБДД, Казань"
+                       Margin="10"
+                       FontWeight="Bold"
+                       FontSize="18"/>
+                <Label Content="Адрес: Казань, Кулагина 8"
+                       Margin="10,0,0,0"/>
+                <Label Content="Телефон: +7 (843) 278-40-22"
+                       Margin="10,0,0,0"/>
+                <Label Content="Советское ГИБДД, Казань"
+                       Margin="10"
+                       FontWeight="Bold"
+                       FontSize="18"/>
+                <Label Content="Адрес: Казань, Мамадышский тракт 5"
+                       Margin="10,0,0,0"/>
+                <Label Content="Телефон: +7 (843) 276-87-41"
+                       Margin="10,0,0,0"/>
+                
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Page>

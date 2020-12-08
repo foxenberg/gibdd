@@ -1,0 +1,94 @@
+﻿<Page x:Class="SolutionForGIBDD.Pages.VerifyAmountPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SolutionForGIBDD.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="610" d:DesignWidth="1270"
+      Title="VerifyAmountPage">
+
+    <Grid Background="#1C2F3E">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView x:Name="driverList"
+                  Grid.Row="1" Grid.ColumnSpan="2"
+                  Margin="20"
+                  Foreground="Black"
+                  MouseDoubleClick="driverList_MouseDoubleClick" SelectionChanged="driverList_SelectionChanged">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="Background" Value="LightSteelBlue"/>
+                    <Setter Property="Margin" Value="5"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="FontSize" Value="17"/>
+                    <Style.Triggers>
+
+                        <DataTrigger Binding="{Binding IsOtuedDate}"
+                                     Value="true">
+                            <Setter Property="Background" Value="Red"/>
+                        </DataTrigger>
+
+                    </Style.Triggers>
+                </Style>
+
+            </ListView.ItemContainerStyle>
+            <ListView.View>
+                <GridView>
+                   
+                    <GridViewColumn Width="150"
+                                    DisplayMemberBinding="{Binding Surname}"
+                                    Header="Фамилия"/>
+                    <GridViewColumn Width="150"
+                                    DisplayMemberBinding="{Binding Name}"
+                                    Header="Имя"/>
+                    <GridViewColumn Width="150"
+                                    DisplayMemberBinding="{Binding MiddleName}"
+                                    Header="Отчество"/>
+                    <GridViewColumn Width="150"
+                                    DisplayMemberBinding="{Binding CarNumber}"
+                                    Header="ГосНомер"/>
+                    <GridViewColumn Width="220"
+                                    DisplayMemberBinding="{Binding DriverLicense}"
+                                    Header="Водительское удостоверение"/>
+                    
+                    <GridViewColumn Width="140"
+                                    DisplayMemberBinding="{Binding ID_Fine}"
+                                    Header="Штраф"/>
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Grid Grid.Row="0"
+              Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label x:Name="numberDriver"
+                   Grid.Row="1"
+                   Grid.Column="0"
+                   Content="№ удостоверения"
+                   FontSize="18"
+                   HorizontalAlignment="Right"
+                   Margin="0,0,5,0"/>
+            <TextBox x:Name="textBoxLicense"
+                     Grid.Row="1"
+                     Grid.Column="1"
+                     Foreground="White"
+                     TextChanged="textBoxLicense_TextChanged"
+                     KeyDown="textBoxLicense_KeyDown"/>
+        </Grid>
+    </Grid>
+</Page>
